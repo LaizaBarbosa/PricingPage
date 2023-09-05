@@ -1,0 +1,530 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}   
+
+button:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+
+/* ESTILIZAÇÃO NAVBAR */
+.navBar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 150px;
+    box-shadow: 0px 1px 5px #4D5096;
+}
+
+.navBar .logo{
+    color: #F04D4A;
+    margin-right: auto;
+    margin-left: 80px;
+    font-size: 2rem;
+}
+
+
+.navMenu{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.navItem a{
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: #4D5096;
+}
+
+.navItem{
+    transition:0.3s ease;
+    list-style: none;
+}
+
+.navItem:hover{
+    transform: scale(1.05);
+}
+
+.dropMenu{
+    background-color: #fff;
+    position: absolute;
+    display: none;
+}
+
+.dropMenu a{
+    
+    font-size: 1.1rem;
+    display: block;
+}
+
+.dropMenu a:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+    width: 90px;
+}
+
+.dropdown:hover .dropMenu{
+    display: block;
+    transition: ease-in-out 0.5s;
+}
+
+.btnNav{
+    margin-left: auto;
+    margin-right: 80px;
+}
+
+.btnLog, .btnSign{
+    cursor: pointer;
+    border-radius: 3px;
+    padding: 5px 15px;
+    font-size: 1rem;
+    margin: 10px 20px;
+    border: solid 2px #F04D4A;
+    font-weight: bold;
+}
+
+.btnLog{
+    background-color: #fff;
+    color: #F04D4A;
+}
+
+.btnLog:hover{
+    color: #fff;
+    background-color: #F04D4A;
+}
+
+.btnSign{
+    color: #fff;
+    background-color: #F04D4A;
+}
+
+.btnSign:hover{
+    color: #F04D4A;
+    background-color: #fff;
+}
+
+.hamburguer{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius:2px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: #f04d4a;
+}
+
+/* ESTILIZAÇÃO DO SWITCH */
+.toggleBtn{
+    display: flex;
+    float: right;
+    margin-top: -25px;
+    margin-left: auto;
+    margin-right: 160px;
+}
+
+.toggleBtn p{
+    margin: 3px 5px 0px 5px;
+    color: #4d5096;
+}
+
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+  }
+  
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #4d5096;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 19px;
+    width: 19px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background-color: #F04D4A;
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px #F04D4A;
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(32px);
+    -ms-transform: translateX(32px);
+    transform: translateX(23px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+   border-radius: 50%;
+}
+
+
+.titleContent{
+    font-family: 'Times';
+    font-weight: 200;
+    color: #4D5096;
+    font-size: 2.4rem;
+    width: fit-content;
+    margin-right: auto;
+    margin-left: 160px;
+}
+
+/* ESTILIZAÇÃO DOS CARDS */
+.cardContent{
+    display: flex;
+    flex-direction: row;
+}
+
+.card{
+    margin: 100px auto 0;
+    width: 400px;
+    height: 450px;
+    perspective: 1000px;
+}
+
+.innerCard{
+    width: 100%;
+    height: 100%;
+    transition:transform 1s;
+    transform-style: preserve-3d;
+    position: relative;
+    border: #4D509696 solid 1px;
+    border-radius: 5px;
+    padding: 30px 60px;
+    color: #4D5096;
+}
+
+.innerCard h2{
+    font-weight: lighter;
+}
+
+.innerCard.isFlipped{
+    transform: rotateY(180deg);
+}
+
+.frontCard, .backCard{
+    position: absolute;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+
+.frontCard{
+    padding: 0;
+}
+
+.backCard{
+    transform: rotateY(180deg);
+}
+
+
+
+.priceTitle{
+    font-size: 2.2rem;
+    padding: 25px 0px;
+    margin: 5px 0px;
+    border-bottom: #F04D4A solid 2px;
+}
+
+
+.backCard mark{
+    color: #fff;
+    background-color: #F04D4A;
+    border-radius: 2px;
+    padding: 0px 2px;
+
+}
+
+.cardBtn{
+    font-size: 1.1rem;
+    background-color: #F04D4A;
+    color: #fff;
+    border: #F04D4A 2px solid;
+    border-radius: 3px;
+    padding: 10px 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 10px;
+}
+
+
+/* SEÇÃO DE PERGUNTAS */
+.questSec{
+    margin: auto auto;
+    margin-top: 80px;
+    text-align: center;
+    max-width: 800px;
+    font-size: 1.7rem;
+}
+
+.questSec h1{
+    margin: auto auto;
+    color: #F04D4A;
+    font-weight: lighter;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    margin:40px 0px ;
+}
+
+.titleQ{
+    border-radius: 3px;
+    padding: 10px ;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.questContent{
+    height: 0;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    font-size: 1rem;
+}
+
+.active{
+    border-radius: 2px;
+    padding-bottom: 90px;
+}
+
+span {
+    color: #4D5096;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.questContent p{
+    border-bottom: #4D5096 2px solid;
+    padding: 15px 15px;
+    color: #4D5096;
+    text-align: justify;
+}
+
+.titleQ:hover{
+    transition: all 0.3s ease;
+    transform: scale(1.01);
+    box-shadow: #4D509654 2.4px 2.4px 3.2px;
+}
+
+
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    color: #4D5096;
+    padding: 100px 0px;
+    background-color: #4D509610;
+}
+
+footer h2{
+    margin-bottom: 2.5rem;
+}
+
+.subtitle{
+    margin-top: 2rem;
+    color: #F04D4A;
+}
+
+.subTemplates{
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+footer p:hover{
+    color: #F04D4A;
+}
+
+
+
+
+
+@media (width <= 768px ){
+
+    .navBar .logo{
+        margin: 0;
+        justify-content: space-around;
+        padding: 0 15px;
+    }
+
+    .hamburguer{
+        display: block;
+        margin: 0px 15px;
+    }
+
+    .hamburguer.activeH .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburguer.activeH .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburguer.activeH .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .navMenu{
+        width: 100%;
+        position: absolute;
+        left: -200%;
+        top: 60px;
+        gap: 30px;
+        justify-content: center;
+        flex-direction: row;
+        transition: 0.3s;
+    }
+
+    .navMenu.activeH{
+        top: 60px;
+        left: 0;
+    }
+
+    .dropMenu{
+        position: absolute;
+    }
+
+    .btnNav{
+        margin: 0px;
+       padding: 0px 10px;
+    }
+
+    .btnLog, .btnSign{
+        padding: 5px 10px;
+        margin: 0 10px;
+    }
+
+    .titleContent{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .toggleBtn{
+       float: none;
+       justify-content: center;
+        margin: 20px auto;
+    }
+
+
+    .cardContent{
+        margin-top: 10px;
+    }
+
+    .card{
+        margin: 20px 10px;
+    }
+
+    .innerCard{
+        padding: 30px 20px;
+    }
+
+    .priceTitle{
+        width: 90%;
+    }
+
+    .cardBtn{
+        margin: 40px 0px;
+    }
+
+    .questSec {
+    max-width: 90%;
+    }
+
+    footer section{
+        margin-left: 0px;
+    }
+
+    footer h2{
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (320px <= width <= 425px) {
+    .logo{
+        font-size: 15px;
+    }
+    .navBar{
+        padding: 0;
+    }
+
+    .btnNav{
+        margin: 0;
+        padding: 0;
+    }
+
+    .btnLog, .btnSign{
+        margin: 0;
+        padding: 0;
+    }
+
+    .backCard{
+        padding-left: 30px;
+    }
+
+    footer{
+        display: block;
+    }
+
+    footer section{
+        margin-left: 80px;
+    }
+}
+
+@media(420px <= width <= 768px){
+    .cardContent{
+        margin: 10px auto;
+        justify-content: center;
+    }
+
+    .innerCard{
+        padding: 30px 60px;
+    }
+
+}

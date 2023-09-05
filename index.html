@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pricing Page</title>
+</head>
+<body>
+    <!-- Navbar com menu dropdown -->
+    <nav class="navBar">
+        <h1 class="logo">Bonsai</h1>
+        
+        <ul class="navMenu">
+            <li class="navItem dropdown">
+                <a href="#" onmouseover="mouseover()" class="navLink">Products</a>
+
+                <div class="dropMenu">
+                    <a href="">Lorem</a>
+                    <a href="">Lorem</a>
+                    <a href="">Lorem</a>
+                </div>
+            </li>
+            <li class="navItem">
+                <a href="" class="navLink">About</a>
+            </li>
+            <li class="navItem">
+                <a href="" class="navLink">Contact</a>
+            </li>
+        </ul>
+
+
+        <div class="btnNav">
+            <button class="btnLog">Log In</button>
+            <button class="btnSign">Start Free</button>
+        </div>
+
+        <div class="hamburguer">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <!-- Cards de preço -->
+    <h1 class="titleContent">Plans & Pricing</h1>
+
+    <div class="toggleBtn">
+        <p>Normal</p>
+        <label class="switch">
+            <input type="checkbox" onclick="FlipCard()">
+            <span class="slider round"></span>
+        </label>
+        <p>Plus</p>
+    </div>
+
+
+        <section class="cardContent">
+            <div class="card">
+                <div class="innerCard">
+                    <!-- parte da frente do card-->
+                    <div class="frontCard">
+                        <h2>WorkFlow</h2>
+                        <p class="priceTitle"> <b>$19</b> /Month </p>
+                        <p> <img src="img/check-regular-24.png" alt=""> Unlimited clients & Projects</p>
+                        <p><img src="img/check-regular-24.png" alt=""> Proposals</p>
+                        <p><img src="img/check-regular-24.png" alt=""> Contracts</p>
+                        <p><img src="img/check-regular-24.png" alt=""> Invoincing & Payment</p>
+                        <p><img src="img/check-regular-24.png" alt=""> Client CRM</p>
+                        <p><img src="img/check-regular-24.png" alt=""> Project Management</p>
+                        <button class="cardBtn">Start free</button>
+                    </div>
+        
+                        <div class="backCard">
+                            <h2>WorkFlow Plus</h2>
+                            <p class="priceTitle"> <b>$29</b> /Month </p>
+                            <p> <img src="img/check-regular-24.png" alt=""> Everything is workflow, plus..</p>
+                            <p><img src="img/check-regular-24.png" alt=""> White labelled client experience</p>
+                            <p><img src="img/check-regular-24.png" alt=""> Client forms and questionnaires <mark>new</mark></p>
+                            <p><img src="img/check-regular-24.png" alt=""> Subcontracting(client-mode)</p>
+                            <p><img src="img/check-regular-24.png" alt=""> Calendly integration</p>
+                            <p><img src="img/check-regular-24.png" alt=""> Client portal</p>
+                            <button class="cardBtn">Start free</button>
+                        </div>
+                    
+        
+                </div>
+            </div>
+        
+        
+        </section>
+    
+
+
+    <section class="questSec">
+        <h1>Frequently asked Questions</h1>
+
+        <article class="content">
+
+            <div class="questItem">
+                <div class="titleQ">
+                    <span>How does the 14 day trial free work?</span>
+                    <div class="icon">
+                        <img src="img/chevron-down-regular-24.png" alt="">
+                    </div>
+                </div>
+    
+                <div class="questContent">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus similique libero optio debitis illum modi iste ipsa, tempora expedita assumenda quo totam quaerat pariatur cum necessitatibus veritatis corrupti, aliquam nisi!</p>
+                </div>
+            </div>
+
+            <div class="questItem">
+                <div class="titleQ">
+                    <span>Can I change plan anytime?</span>
+                    <div class="icon">
+                        <img src="img/chevron-down-regular-24.png" alt="">
+                    </div>
+                </div>
+    
+                <div class="questContent">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus similique libero optio debitis illum modi iste ipsa, tempora expedita assumenda quo totam quaerat pariatur cum necessitatibus veritatis corrupti, aliquam nisi!</p>
+                </div>
+            </div>
+
+            <div class="questItem">
+                <div class="titleQ">
+                    <span>How do I pause my Bonsai Subscription?</span>
+                    <div class="icon">
+                        <img src="img/chevron-down-regular-24.png" alt="">
+                    </div>
+                </div>
+    
+                <div class="questContent">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus similique libero optio debitis illum modi iste ipsa, tempora expedita assumenda quo totam quaerat pariatur cum necessitatibus veritatis corrupti, aliquam nisi!</p>
+                </div>
+            </div>
+
+            <div class="questItem">
+                <div class="titleQ">
+                    <span>What is your refund policy?</span>
+                    <div class="icon">
+                        <img src="img/chevron-down-regular-24.png" alt="">
+                    </div>
+                </div>
+    
+                <div class="questContent">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus similique libero optio debitis illum modi iste ipsa, tempora expedita assumenda quo totam quaerat pariatur cum necessitatibus veritatis corrupti, aliquam nisi!</p>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <footer>
+        <section class="productFooter">
+            <h2>Product</h2>
+            <p>Proposals</p>
+            <p>Contracts</p>
+            <p>CLient CRM</p>
+            <p>Time tracking</p>
+            <p>Task tracking</p>
+            <p>Accouting</p>
+            <p>Forms</p>
+            <p class="subtitle">Pricing</p>
+            <p>Reviews</p>
+        </section>
+
+        <section class="resourcesFooter">
+            <h2>Free resources</h2>
+            <p>Freelance resources</p>
+            <p>Freelance Blog</p>
+            <p>How to write a contract</p>
+            <p>Self employed Taxes Hub</p>
+            <p class="subTemplates">Templates</p>
+            <p>Invoice templates</p>
+            <p>Proposal templates</p>
+            <p>Agreement templates</p>
+            <p>Scope of work templates</p>
+        </section>
+
+        <section class="bonsaiFooter">
+            <h2>Bonsai</h2>
+            <p>About</p>
+            <p>Careers</p>
+            <p>Support</p>
+            <p>LinkedIn</p>
+            <p>Twitter</p>
+            <p>Privacy Legacy</p>
+            <p>Legal</p>
+            
+        </section>
+    </footer>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
